@@ -11,40 +11,37 @@ namespace ConsoleApp29
         static void Main(string[] args)
         {
             //Zahnradparameter:
-            Console.WriteLine("Modul");
-             m = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Bitte geben Sie den Modul an in [mm]");
+             double m = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Zähnezahl");
+            Console.WriteLine("Bite geben Sie die Zähnezahl an");
             double z = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Teilkreisdurchmesser");
+            Console.WriteLine("Bitte geben Sie den Teilkreisdurchmesser in [mm] an");
             double d = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Breite");
-            double b = Convert.ToDouble(Console.ReadLine());
 
             //Spezielle Eigenschaften:
 
-            //1.Zahnhohe(Zahnfusshohe,Zahnkopfhohe):
+            //1.Zahnhöhe(Zahnfußhöhe,Zahnkopfhöhe):
             double c = 0.167 * m;
 
             double ha = m;
-            Console.WriteLine("Zahnkopfhohe:" + ha);
+            Console.WriteLine("Zahnkopfhöhe:" + ha + " mm");
 
             double hf = m + c;
-            Console.WriteLine("Zahnfusshohe:" + hf);
+            Console.WriteLine("Zahnfußhöhe:" + hf + " mm");
 
             //2.Teilung
             double p = Math.PI * m;
-            Console.WriteLine("Teilung:" + p);
+            Console.WriteLine("Teilung:" + p + " mm");
 
-            //3.Fusskreisdurchmesser
+            //3.Fußkreisdurchmesser
             double df = d - 2 * (m + c);
-            Console.WriteLine("Fusskreisdurchmesser:" + df);
+            Console.WriteLine("Fußkreisdurchmesser:" + df + " mm");
 
             //4.Grundkreisdurchmesser;
             double db= m * z * Math.Cos(20 * Math.PI / 180);
-            Console.WriteLine("Grundkreisdurchmesser:" + db);
+            Console.WriteLine("Grundkreisdurchmesser:" + db + " mm");
 
             Console.Read();
 
